@@ -1,15 +1,350 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Coinpapa</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="en">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <!-- Title -->
+  <title>Buy bitcoin and ethereum with credit card | Coinpapa</title>
 
-  <body>
-    <%= yield %>
-  </body>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../favicon.ico">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+  <!-- CSS Global Compulsory -->
+  <link rel="stylesheet" href="/unify/assets/vendor/bootstrap/bootstrap.min.css">
+  <!-- CSS Global Icons -->
+  <link rel="stylesheet" href="/unify/assets/vendor/icon-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/icon-line/css/simple-line-icons.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/icon-etlinefont/style.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/icon-line-pro/style.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/icon-hs/style.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/dzsparallaxer/dzsparallaxer.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/animate.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/typedjs/typed.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/hs-megamenu/src/hs.megamenu.css">
+  <link rel="stylesheet" href="/unify/assets/vendor/hamburgers/hamburgers.min.css">
+
+  <!-- CSS Unify -->
+  <link rel="stylesheet" href="/unify/assets/css/unify-core.css">
+  <link rel="stylesheet" href="/unify/assets/css/unify-components.css">
+  <link rel="stylesheet" href="/unify/assets/css/unify-globals.css">
+
+  <!-- CSS Customization -->
+  <link rel="stylesheet" href="/unify/assets/css/custom.css">
+</head>
+
+<body>
+  <main>
+
+    <!-- Header -->
+    <header id="js-header" class="u-header u-header--sticky-top u-header--toggle-section u-header--change-appearance" data-header-fix-moment="300">
+
+      <div class="u-header__section u-header__section--dark g-bg-black g-transition-0_3 g-py-10" data-header-fix-moment-exclude="g-py-10" data-header-fix-moment-classes="g-py-0">
+        <nav class="js-mega-menu navbar navbar-expand-lg hs-menu-initialized hs-menu-horizontal">
+          <div class="container">
+            <!-- Responsive Toggle Button -->
+            <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-minus-3 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+              <span class="hamburger hamburger--slider">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+              </span>
+              </span>
+            </button>
+            <!-- End Responsive Toggle Button -->
+
+            <!-- Logo -->
+            <a href="/" class="navbar-brand d-flex"><big><strong>Coinpapa</strong></big></a>
+            <!-- End Logo -->
+
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg" id="navBar">
+              <ul class="navbar-nav text-uppercase g-pos-rel g-font-weight-600 ml-auto">
+
+                <!-- Buy -->
+                <li class="nav-item hs-has-sub-menu  g-mx-10--lg g-mx-15--xl" data-animation-in="fadeIn" data-animation-out="fadeOut">
+                  <a id="nav-link--buy" class="nav-link g-py-7 g-px-0" href="#" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--buy">Buy</a>
+
+                  <ul class="g-bg-black hs-sub-menu list-unstyled u-shadow-v11 g-brd-top g-brd-primary g-brd-top-2 g-min-width-220 g-mt-18 g-mt-8--lg--scrolling" id="nav-submenu--buy" aria-labelledby="nav-link--features">
+                    <!-- Buy - Bitcoin -->
+                    <li class="dropdown-item ">
+                      <a class="nav-link" href="/buy"><img src="/img/bitcoin.png" style="width:14px;height:14px;">&nbsp;&nbsp;Bitcoin</a>
+                    </li>
+                    <!-- End Buy - Bitcoin -->
+
+                    <!-- Buy - Ethereum -->
+                    <li class="dropdown-item ">
+                      <a class="nav-link" href="/buy"><img src="/img/eth.png"  style="width:14px;height:14px;">&nbsp;&nbsp;Ethereum</a>
+                    </li>
+                    <!-- End Buy - Ethereum -->
+
+                    <!-- Buy - Litecoin -->
+                    <li class="dropdown-item ">
+                      <a class="nav-link" href="/buy"><img src="/img/litecoin.png" style="width:14px;height:14px;" >&nbsp;&nbsp;Litecoin</a>
+                    </li>
+                    <!-- End Buy - Litecoin -->
+
+                    <!-- Buy - Bitcoin Cash -->
+                    <li class="dropdown-item ">
+                      <a class="nav-link" href="/buy"><img src="/img/bitcoin_cash.png" style="width:14px;height:14px;" >&nbsp;&nbsp;Bitcoin Cash</a>
+                    </li>
+                    <!-- End Buy - Bitcoin Cash -->
+
+                  </ul>
+                </li>
+                <!-- End Buy -->
+
+                <!-- News -->
+                <li class="nav-item  g-mx-10--lg g-mx-15--xl">
+                  <%= link_to 'News', news_path, class: "nav-link g-py-7 g-px-0" %>
+                </li>
+                <!-- End News -->
+
+                <!-- Help -->
+                <li class="nav-item  g-mx-10--lg g-mx-15--xl">
+                  <%= link_to 'Help', help_path, class: "nav-link g-py-7 g-px-0" %>
+                </li>
+                <!-- End Help -->
+
+                <!-- Affiliate -->
+                <li class="nav-item  g-mx-10--lg g-mx-15--xl">
+                  <%= link_to 'Affiliate', affiliate_path, class: "nav-link g-py-7 g-px-0" %>
+                </li>
+                <!-- End Affiliate -->
+
+                <!-- Sign Up -->
+                <li class="nav-item  g-mx-10--lg g-mx-15--xl">
+                  <%= link_to 'Sign Up', sign_up_path, class: "nav-link g-py-7 g-px-0" %>
+                </li>
+                <!-- Sign Up -->
+
+                <!-- Log In -->
+                <li class="nav-item  g-mx-10--lg g-mx-15--xl">
+                  <%= link_to 'Log In', log_in_path, class: "nav-link g-py-7 g-px-0" %>
+                </li>
+                <!-- Log In -->
+
+              </ul>
+            </div>
+            <!-- End Navigation -->
+
+
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+    
+    <%= content_for?(:content) ? yield(:content) : yield %>
+
+
+
+    <!-- Footer -->
+    <div id="contacts-section" class="g-bg-black-opacity-0_9 g-color-white-opacity-0_8 g-py-60">
+      <div class="container">
+        <div class="row">
+
+          <!-- Footer Content -->
+          <div class="col-lg-3 col-md-6">
+          <h2 class="h6 text-uppercase g-font-weight-600 g-mb-15">Quick Links</h2>
+          <ul class="list-unstyled g-mb-35">
+            <li class="g-mb-5">
+              <%= link_to 'Buy cryptocurrency', buy_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'Buy Bitcoin with SEPA', buy_bitcoin_with_sepa_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'How It Works', how_does_it_work_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'FAQ', faq_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+          </ul>
+          </div>
+          <!-- End Footer Content -->
+
+          <!-- Footer Content -->
+          <div class="col-lg-3 col-md-6">
+          <h2 class="h6 text-uppercase g-font-weight-600 g-mb-15">Company</h2>
+          <ul class="list-unstyled g-mb-35">
+            <li class="g-mb-5">
+              <%= link_to 'About', about_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'Careers', careers_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'Affiliate', affiliate_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'Affiliate terms', affiliate_terms_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'Terms of Use', terms_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'Privacy policy', privacy_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+          </ul>
+          </div>
+          <!-- End Footer Content -->
+
+          <!-- Footer Content -->
+          <div class="col-lg-3 col-md-6">
+          <h2 class="h6 text-uppercase g-font-weight-600 g-mb-15">Support</h2>
+          <ul class="list-unstyled g-mb-35">
+            <li class="g-mb-5">
+              <%= link_to 'Help Center', help_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'Contact', contact_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'Guide', guide_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+
+          </ul>
+          </div>
+          <!-- End Footer Content -->
+
+          <!-- Footer Content -->
+          <div class="col-lg-3 col-md-6">
+          <h2 class="h6 text-uppercase g-font-weight-600 g-mb-15">Social</h2>
+          <ul class="list-unstyled g-mb-35">
+            <li class="g-mb-5">
+              <%= link_to 'News', news_path, class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'Facebook', 'https://www.facebook.com/Coinmama/',  target: "_blank", class: "g-color-white-opacity-0_8" %>
+            </li>
+            <li class="g-mb-5">
+              <%= link_to 'Twitter', 'https://twitter.com/Coinmamacom',  target: "_blank", class: "g-color-white-opacity-0_8" %>
+            </li>
+          </ul>
+          </div>
+          <!-- End Footer Content -->
+
+        </div>
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Copyright Footer -->
+    <footer class="g-bg-gray-dark-v1 g-color-white-opacity-0_8 g-py-20">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center text-md-left g-mb-10 g-mb-0--md">
+            <div class="d-lg-flex">
+              <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">2019 &copy; Coinpapa. All Rights Reserved.</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    <!-- End Copyright Footer -->
+    <a class="js-go-to u-go-to-v1" href="#" data-type="fixed" data-position='{
+     "bottom": 15,
+     "right": 15
+   }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
+      <i class="hs-icon hs-icon-arrow-top"></i>
+    </a>
+  </main>
+
+  <div class="u-outer-spaces-helper"></div>
+
+
+  <!-- JS Global Compulsory -->
+  <script src="/unify/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/unify/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+  <script src="/unify/assets/vendor/popper.js/popper.min.js"></script>
+  <script src="/unify/assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+
+  <!-- JS Implementing Plugins -->
+  <script src="/unify/assets/vendor/slick-carousel/slick/slick.js"></script>
+  <script src="/unify/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+  <script src="/unify/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+  <script src="/unify/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
+  <script src="/unify/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+  <script src="/unify/assets/vendor/fancybox/jquery.fancybox.min.js"></script>
+  <script src="/unify/assets/vendor/typedjs/typed.min.js"></script>
+
+  <!-- JS Unify -->
+  <script src="/unify/assets/js/hs.core.js"></script>
+  <script src="/unify/assets/js/components/hs.carousel.js"></script>
+  <script src="/unify/assets/js/components/hs.header.js"></script>
+  <script src="/unify/assets/js/helpers/hs.hamburgers.js"></script>
+  <script src="/unify/assets/js/components/hs.tabs.js"></script>
+  <script src="/unify/assets/js/components/hs.popup.js"></script>
+  <script src="/unify/assets/js/components/text-animation/hs.text-slideshow.js"></script>
+  <script src="/unify/assets/js/components/hs.go-to.js"></script>
+
+  <!-- JS Customization -->
+  <script src="/unify/assets/js/custom.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+        // initialization of carousel
+        $.HSCore.components.HSCarousel.init('.js-carousel');
+
+        // initialization of tabs
+        $.HSCore.components.HSTabs.init('[role="tablist"]');
+
+        // initialization of popups
+        $.HSCore.components.HSPopup.init('.js-fancybox');
+
+        // initialization of go to
+        $.HSCore.components.HSGoTo.init('.js-go-to');
+
+        // initialization of text animation (typing)
+        $(".u-text-animation.u-text-animation--typing").typed({
+          strings: [
+            "an awesome template",
+            "perfect template",
+            "just like a boss"
+          ],
+          typeSpeed: 60,
+          loop: true,
+          backDelay: 1500
+        });
+      });
+
+      $(window).on('load', function () {
+        // initialization of header
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+        // initialization of HSMegaMenu component
+        $('.js-mega-menu').HSMegaMenu({
+          event: 'hover',
+          pageContainer: $('.container'),
+          breakpoint: 991
+        });
+      });
+
+      $(window).on('resize', function () {
+        setTimeout(function () {
+          $.HSCore.components.HSTabs.init('[role="tablist"]');
+        }, 200);
+      });
+  </script>
+
+
+
+
+
+
+
+</body>
+
 </html>

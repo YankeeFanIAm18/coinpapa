@@ -1,3 +1,21 @@
 Rails.application.routes.draw do
+  root 'top#index'
+  get '/sign-up', to: 'sign_up#index'
+  get '/log-in', to: 'log_in#index'
+  get '/news', to: 'news#index'
+  get '/buy', to: 'buy#index'
+  get '/buy-bitcoin-with-sepa', to: 'buy_bitcoin_with_sepa#index'
+  get '/how-does-it-work', to: 'how_does_it_work#index'
+  get '/faq', to: 'faq#index'
+  get '/privacy', to: 'privacy#index'
+  get '/affiliate', to: 'affiliate#index'
+  get '/affiliate-terms', to: 'affiliate_terms#index'
+  get '/terms', to: 'terms#index'
+  get '/faq', to: 'faq#index'
+  get '/about', to: 'about#index'
+  get '/careers', to: 'careers#index'
+  get '/contact', to: 'contact#index'
+  get '/guide', to: 'guide#index'
+  get '/help', to: 'help#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
