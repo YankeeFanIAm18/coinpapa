@@ -12,7 +12,7 @@ namespace :unify do
     Dir.chdir(Rails.root.join('public')) do
       fname = "unify2.6.2.tgz"
       `wget http://corp.yuknak.net/download/#{fname}`
-      `tar xvzf #{fname}`
+      `tar xvzf #{fname} 1>&2`
     end 
   end
 end
