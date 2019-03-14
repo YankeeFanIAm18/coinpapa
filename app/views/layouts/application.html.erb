@@ -103,7 +103,7 @@
 
                 <!-- Help -->
                 <li class="nav-item  g-mx-10--lg g-mx-15--xl">
-                  <%= link_to 'Help', faq_path, class: "nav-link g-py-7 g-px-0" %>
+                  <%= link_to 'Help', help_path, class: "nav-link g-py-7 g-px-0" %>
                 </li>
                 <!-- End Help -->
 
@@ -149,9 +149,6 @@
             <li class="g-mb-5">
               <%= link_to 'How It Works', how_does_it_work_path, class: "g-color-white-opacity-0_8" %>
             </li>
-            <li class="g-mb-5">
-              <%= link_to 'FAQ', faq_path, class: "g-color-white-opacity-0_8" %>
-            </li>
           </ul>
           </div>
           <!-- End Footer Content -->
@@ -177,13 +174,12 @@
           <div class="col-lg-3 col-md-6">
           <h2 class="h6 text-uppercase g-font-weight-600 g-mb-15">Support</h2>
           <ul class="list-unstyled g-mb-35">
-            <li class="g-mb-5">
+          <li class="g-mb-5">
+          <%= link_to 'Help', help_path, class: "g-color-white-opacity-0_8" %>
+        </li>
+        <li class="g-mb-5">
               <%= link_to 'Contact', contact_path, class: "g-color-white-opacity-0_8" %>
             </li>
-            <li class="g-mb-5">
-              <%= link_to 'Guide', guide_path, class: "g-color-white-opacity-0_8" %>
-            </li>
-
           </ul>
           </div>
           <!-- End Footer Content -->
