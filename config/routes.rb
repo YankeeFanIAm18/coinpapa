@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :logs
   root 'top#index'
 
   get '/sign-up', to: 'sign_up#index'
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
   
     resources :orders
     resources :users
+    resources :logs
   
   end
 

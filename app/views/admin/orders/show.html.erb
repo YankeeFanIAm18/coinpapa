@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @order.user_id %>
+</p>
+
+<p>
+  <strong>Ctrlid:</strong>
+  <%= @order.ctrlid %>
+</p>
+
+<p>
+  <strong>Reqtime:</strong>
+  <%= @order.reqtime %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @order.currency %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @order.value %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @order.price %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @order.status %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @order.detail %>
+</p>
+
+<%= link_to 'Edit', edit_admin_order_path(@order) %> |
+<%= link_to 'Back', admin_orders_path %>

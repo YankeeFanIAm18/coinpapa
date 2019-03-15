@@ -2,6 +2,10 @@
 <html>
   <head>
     <title>COINPAPA - Admin</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,6 +29,9 @@
       </li>
       <li class="nav-item active">
           <%= link_to 'Orders', admin_orders_path,  class: "nav-link" %>
+      </li>
+      <li class="nav-item active">
+          <%= link_to 'Logs', admin_logs_path,  class: "nav-link" %>
       </li>
     </ul>
   </div>

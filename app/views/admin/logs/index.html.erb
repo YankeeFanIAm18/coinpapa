@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Logs</h1>
+
+<div class="table-responsive"><table class="table table-striped table-sm table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Logtime</th>
+      <th>User</th>
+      <th>Level</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logs.each do |log| %>
+      <tr>
+        <td><%= log.logtime %></td>
+        <td><%= log.user_id %></td>
+        <td><%= log.level %></td>
+        <td><%= log.message %></td>
+        <td><%= link_to 'Show', admin_log_path(log) %></td>
+        <td><%= link_to 'Edit', edit_admin_log_path(log) %></td>
+        <td><%= link_to 'Destroy', admin_log_path(log), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table></div><!-- table-responsive -->
+
+<br>
+
+<%= link_to 'New Log', new_admin_log_path %>

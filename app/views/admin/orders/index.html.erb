@@ -2,3 +2,42 @@
 
 <h1>Orders</h1>
 
+
+<div class="table-responsive"><table class="table table-striped table-sm table-bordered table-hover">
+
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Ctrlid</th>
+      <th>Reqtime</th>
+      <th>Currency</th>
+      <th>Value</th>
+      <th>Price</th>
+      <th>Status</th>
+      <th>Detail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.user_id %></td>
+        <td><%= order.ctrlid %></td>
+        <td><%= order.reqtime %></td>
+        <td><%= order.currency %></td>
+        <td><%= order.value %></td>
+        <td><%= order.price %></td>
+        <td><%= order.status %></td>
+        <td><%= order.detail %></td>
+        <td><%= link_to 'Show', admin_order_path(order) %></td>
+        <td><%= link_to 'Edit', edit_admin_order_path(order) %></td>
+        <td><%= link_to 'Destroy', admin_order_path(order), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table></div><!-- table-responsive -->
+
+<br>
+
+<%= link_to 'New Order', new_admin_order_path %>

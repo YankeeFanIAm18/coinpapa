@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Logtime:</strong>
+  <%= @log.logtime %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @log.user_id %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @log.level %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @log.message %>
+</p>
+
+<%= link_to 'Edit', edit_admin_log_path(@log) %> |
+<%= link_to 'Back', admin_logs_path %>
